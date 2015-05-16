@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>Andrew's Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="TOC">
+  <h1>Table of Contents</h1>
+  <ol>
+  <li><a href="#lesson-1">Lesson 1: The World Wide Web</a>
+    <ul>
+      <li><a href="#lesson-1-1">HTML</a></li>
+      <li><a href="#lesson-1-2">HTML Attributes</a></li>
+      <li><a href="#lesson-1-3">Whitespace</a></li>
+      <li><a href="#lesson-1-4">HTML Documents</a></li>
+      <li><a href="#lesson-1-5">Computers Aren't That Bright</a></li></ul>
+  <li><a href="#lesson-2">Lesson 2: Creating a Structured Document</a>
+    <ul>
+      <li><a href="#lesson-2-1">About Front-End Development</a></li>
+      <li><a href="#lesson-2-2">What Are HTML and CSS For?</a></li>
+      <li><a href="#lesson-2-3">Tree-Like Structures</a></li>
+      <li><a href="#lesson-2-4">How Browsers Know What To Do</a></li>
+      <li><a href="#lesson-2-5">All Objects Are Boxes</a></li></ul>
+  <li><a href="#lesson-3">Lesson 3: CSS</a>
+      <ul>
+      <li><a href="#lesson-3-1">Don't Repeat Yourself!</a></li>
+      <li><a href="#lesson-3-2">An Analog: CSS is Like...</a></li>
+      <li><a href="#lesson-3-3">Inheritance</a></li>
+      <li><a href="#lesson-3-4">Inheritable and Uninheritable Properties</a></li>
+      <li><a href="#lesson-3-5">Three Ways to Write CSS</a></li>
+      <li><a href="#lesson-3-6">Boxes Revisited</a></li>
+      <li><a href="#lesson-3-7">Positioning Elements and Flexbox Layouts</a></li>
+      <li><a href="#lesson-3-8">Code, Test, Refine</a></li></ul></ol></div>
+
+<h1>Important Concepts</h1>
+<div class="lesson">
+  <h2 id="lesson-1"><b>Lesson 1: The World Wide Web</b></h2>
+    <div class="concept">
+      <div class="concept-title">The World Wide Web</div>
+      <div class="content description">
+  <p>The World Wide Web is a collection of HTML documents started in the early 1990s that now consists of 30+ billion pages. Pages are connected via links, which is how users navigate from one document to another.</p>
+  <p>HTTP is short for <b>Hypertext Transfer Protocol.</b> It allows users to make requests from the internet, which retrieves files from servers, which are other computers that host files such as web pages.</p></div></div>
+ 
+    <div class="concept" id="lesson-1-1">
+      <div class="concept-title">HTML</div>
+      <div class="content description">
+  <p>HTML is short for <b>Hypertext Markup Language</b> and is the basis of all pages on the World Wide Web. It can consist of text content (what's visible on the page), markup (the code that a computer renders as a web page), references to other types of documents such as images or videos, and links to other pages. HTML is made up of <b>tags</b>, which can be nested. </p></div></div>
+  
+    <div class="concept" id="lesson-1-2">
+      <div class="concept-title">HTML Attributes</div>
+      <div class="content description">
+  <p>HTML tags can have multiple attributes. The anchor tag, for example, can be given a value that transforms a piece of text into a hyperlink like <a href="www.zombo.com">this one</a>. Unlike anchor tags, image tags are <b>void</b> tags as they have no closing tags.</p></div></div>
+
+    <div class="concept" id="lesson-1-3">
+      <div class="concept-title">Whitespace</div>
+      <div class="content description">
+  <p>In HTML, text on multiple lines renders as a single line unless you tell it to render otherwise. Some options for doing this include the BREAK tag, which is a void tag that creates multiple lines, or the P tag, which is a block, or an invisible box around the content being rendered.
+  <p> </div></div>
+  
+    <div class="concept" id="lesson-1-4">
+      <div class="concept-title">HTML Documents</div>
+      <div class="content description">
+  <p>An HTML document contains a number of elements, including formatting, headers (which tell the browser such details as page title via metadata), the body (where we're currently working), and others.</p></div></div>
+  
+    <div class="concept" id="lesson-1-5">
+      <div class="concept-title">Computers Aren't That Bright</div>
+      <div class="content description">
+  <p>Computers take things ultra-literally. They can't compensate for bad programming and can fail, crash, or otherwise misbehave in the event that they're provided with bad information, unlike a human.</p></div></div></div>
+
+<div class="lesson">
+  <h2 id="lesson-2"><b>Lesson 2: Creating a Structured Document</b></h2>
+    <div class="concept" id="lesson-2-1">
+      <div class="concept-title">About Front-end Development</div>
+      <div class="content description">
+    <p>Front-end development is inherently visual. It allows users to share content using HTML, CSS, and Javascript, though this course focuses only on HTML and CSS. Both HTML and CSS change over time, but the underlying principles are the same.</p></div></div>
+
+    <div class="concept" id="lesson-2-2">
+      <div class="concept-title">What Are HTML and CSS for?</div>
+      <div class="content description">
+    <p>If likening a webpage to a house, HTML provides the basic structure of the house: it provides the walls, the floors, etc. CSS dictates the style - the carpeting, the decorations. Javascript, in this analogy, is responsible for interactive objects: remotes, openers, and so on.</p></div></div>
+
+    <div class="concept" id="lesson-2-3">
+      <div class="concept-title">Tree-like Structures</div>
+      <div class="content description">
+    <p>A webpage can be thought of like a tree. There are many branches, each of which is an element, and there can be elements within elements, much like there are branches connected to branches connected to branches. One can use developer tools to see what this structure looks like as the browser interprets it in order to render the page for the viewer. While not every element is visible, all elements on the page have a rectangular box that corresponds to a line of code, and if one digs deep enough in the inner structure one can find every line of text presented on the page.</p></div></div>
+
+    <div class="concept" id="lesson-2-4">
+      <div class="concept-title">How Browsers Know What To Do</div>
+      <div class="content description">
+    <p>HTML has a specific syntax and rules one must follow when using it. The DOM (document object model) determines how HTML elements are rendered, and CSS allows the user to take specific syntax and rules to change how elements such as font size, text color, etc look on a page. There are specific rules for everything, and once one can parse these elements it becomes easy to determine how a page looks from the code and how to break a page down into chunks of manageable code.</p></div></div>
+
+    <div class="concept" id="lesson-2-5">
+      <div class="concept-title">All Objects Are Boxes</div>
+      <div class="content description">
+    <p>In Object-oriented Web design, every element on the page has a corresponding box. This kind of box can be defined with a DIV tag, and the best way to mark styles is with <b>Class Attributes</b>, which serve like labels on a box. Tags can also have multiple classes.</p>
+  </div></div>
+  </div>
+    
+<div class="lesson">
+  <h2 id="lesson-3"><b>Lesson 3: CSS</b></h2>
+    <div class="concept" id="lesson-3-1">
+      <div class="concept-title">Don't Repeat Yourself!</div>
+      <div class="content description">
+    <p>In programming, it's inefficient to write the same code over and over again. CSS - Cascading Style Sheets - allow one to write code once and apply it to many different elements on a page. Several CSS files can be referenced in an HTML document, and all of them will be used to determine the final and visible style for the page.</p></div></div>
+    <div class="concept" id="lesson-3-2">
+      <div class="concept-title">An Analog: CSS is Like...</div>
+      <div class="content description">
+    <p>In CSS, the most specific rule applies to every element on a page. If it were a series of rules, it would be like one's personal house rules carried the same weight as a national law.</p></div></div>
+    <div class="concept" id="lesson-3-3">
+      <div class="concept-title">Inheritance</div>
+      <div class="content description">
+    <p>CSS functions on an ancestor-descendant relationship. Properties apply not only to specific elements but to all descendants. It relies on a document tree hierarchy of (X)HTML elements based on nests. Descendant elements may inherit CSS values from ancestor elements, and descendant elements inherit text properties, but box properties aren't inherited.</p></div></div>
+    <div class="concept" id="lesson-3-4">
+      <div class="concept-title">Inheritable and Uninheritable Properties</div>
+      <div class="content description">
+    <p>Text styling, whitespace, and wordspace are all inheritable. <br>
+    Background, border, display, float/clear, height/width, margin, and min/max are not.</p></div></div>
+    <div class="concept" id="lesson-3-5">
+      <div class="concept-title">Three Ways to Write CSS</div>
+      <div class="content description">
+    <p>There are three ways to write CSS:<br>
+    1. In the head of an HTML file (good for small projects)<br>
+    2. By linking HTML to CSS (good for larger ones)<br>
+    3. By writing style inline with HTML (which leads to lots of repeated code)<br></p></div></div>
+    <div class="concept" id="lesson-3-6">
+      <div class="concept-title">Boxes Revisited</div>
+      <div class="content description">
+    <p>The box model consists of Margins, Borders, Padding, and Content. Using CSS, one can use box-sizing, as well as border-box to provide the element and the padding. When one sets the width of the overall box, the size of the box always stays the same. Margins are NOT included in this size. This can also be set as a percentage, though this can lead to a bad UX.</p></div></div>
+    <div class="concept" id="lesson-3-7">
+      <div class="concept-title">Positioning Elements and Flexbox Layouts</div>
+      <div class="content description">
+    <p>Positioning elements is one of the most complicated things in CSS. Flexbox is an efficient way to lay out lines and DIVs. To place elements next to each other, change the value of the parent container to FLEX.</p></div></div>
+    <div class="concept" id="lesson-3-8">
+      <div class="concept-title">Code, Test, Refine</div>
+      <div class="content description">
+    <p>Frontend development requires steps.<br>
+    1. Get the structure right - visibly boxify the page.<br>
+    2. Work on tags.<br>
+    3. Establish how big everything should be.<br>
+    4. Figure out where everything needs to be positioned.<br>
+    5. Work on smaller details - look for natural boxes, repeated styles, write your HTML, apply styles from the biggest/most sidewide to the smallest/most page-specific, and then fix things.</p></div></div></div>
+</body>
+</html>
